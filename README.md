@@ -25,12 +25,72 @@
 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-Name of feature: **************\_\_\_\_**************
+Name of feature: Create the API
 
-Estimate of time needed to complete: **\_**
+Estimate of time needed to complete: 20 hours
 
-Start time: **\_**
+Start time: 1:00pm
 
-Finish time: **\_**
+Finish time: 12:00 am
 
-Actual time needed to complete: **\_**
+Actual time needed to complete: too long
+
+Name of feature:
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
+
+Name of feature:
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
+
+Name of feature:
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
+
+Name of feature:
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
+
+Name of feature:
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
+
+Name of feature:
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
