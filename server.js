@@ -1,49 +1,59 @@
-'use strict';
-//hi
-const express = require('express');
-require('dotenv').config();
+"use strict";
 
-const cors = require('cors');
+// calling express library
+const express = require("express");
 
-const weather = require('./weather.json');
+// for env
+require("dotenv").config();
+const cors = require("cors");
 
+// SuperAgent
+const superagent = require("superagent");
+
+// // get weather data
+// const weather = require("./data/weather.json");
+// const weather_data = weather.data;
+
+// initializing express library
 const app = express();
-
 app.use(cors());
-
 const PORT = process.env.PORT;
 
-app.get('/', function (request, response) {
-    response.send('Hello World')
-})
+function Forecast(date, description) {
+  this.date = date;
+  this.description = description;
+}
 
-app.get('/weather', handleWeather);
-
-function handleWeather(request,response){
-  const city = weather.city_name;
-  const lat = weather.lat;
-  const lon = weather.lon;
-  
-  try{
-    let array = weather.data.map(day => {
-      return new Forecast(day)
+function getForecast(req, res) {
+  let city = req.query.city;
+  console.log(city);
+  let url = `http://api.weatherbit.io/v2.0/current`;
+  let queryWeather = {
+    city: city,
+    key: process.env.WEATHER_API_KEY,
+    
+  };
+  superagent
+    .get(url)
+    .query(queryWeather)
+    .then((saResults) => {
+      let saData = saResults.body.data;
+      console.log(saData);
+      let forecastArr = saData.map(
+        (x) => new Forecast(x.datetime, x.weather.description)
+      );
+      res.status(200).send({
+        longitude: saData.lon,
+        latitude: saData.lat,
+        forecast: forecastArr,
       });
-      const results = {
-        city: city,
-        lat: lat,
-        lon: lon,
-        forecast: array
-      };
-    response.status(200).json(results);
-  } catch (error) {
-    response.status(500).send(error.message);
-}
-console.log(error)
+    });
 }
 
-function Forecast(obj){
-    this.description = obj.weather.description;
-    this.date = obj.datetime; 
-}
+
+app.get("/", function (req, res) {
+  res.send("Hello World");
+});
+app.get("/weather", getForecast);
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
