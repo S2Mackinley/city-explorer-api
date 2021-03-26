@@ -25,7 +25,9 @@
 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-Name of feature: Create the API
+03/22/21
+
+## Name of feature: Create the API
 
 Estimate of time needed to complete: 20 hours
 
@@ -35,37 +37,37 @@ Finish time: 12:00 am
 
 Actual time needed to complete: too long
 
-Name of feature:
+## Name of feature: Added weather json file (placeholder)
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 10 hours
 
-Start time:
+Start time: 1:30pm
 
-Finish time:
+Finish time: 9:00pm
 
-Actual time needed to complete:
+Actual time needed to complete: 7.5hours
 
-Name of feature:
+## Name of feature: added weather from api
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 10 hours
 
-Start time:
+Start time: 2:00pm
 
-Finish time:
+Finish time:9:00pm
 
-Actual time needed to complete:
+Actual time needed to complete: 7+hours im not done =(
 
-Name of feature:
+## Name of feature:
 
-Estimate of time needed to complete:
+Estimate of time needed to complete:added movies API
 
-Start time:
+Start time: 2:00pm
 
-Finish time:
+Finish time: 9:00pm
 
-Actual time needed to complete:
+Actual time needed to complete: im sadly still working on this =( no completed..
 
-Name of feature:
+## Name of feature:
 
 Estimate of time needed to complete:
 
