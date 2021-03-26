@@ -16,11 +16,13 @@ function getForecast(req, res) {
     .then((saResults) => {
       let saData = saResults.body.data;
       let forecastArr = saData.map(
-        (x) => new Forecast(x.datetime, x.weather.description)
+        (x) => new Forecast(x.datetime, x.weather.description, x.high_temp, x.low_temp)
       );
       res.status(200).send({
         longitude: saData.lon,
         latitude: saData.lat,
+        high_temp: saData.high,
+        low_temp:saData.low,
         forecast: forecastArr,
       });
     });
