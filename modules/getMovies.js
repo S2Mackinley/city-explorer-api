@@ -4,10 +4,9 @@ const Movie = require("./movieConstructor.js");
 
 function getMovies(req, res) {
   let url = `https://api.themoviedb.org/3/search/movie`;
-  // finds first word in returned string of address
-  let regex = /\w*\b/;
-  let title = req.query.title.match(regex)[0];
-  console.log(title);
+  let title = req.query.movie_city;
+  // console.log('getMovies:', req.query.movie_city);
+  // let title = req.query.title.match(regex)[0];
   let queryMovie = {
     api_key: process.env.MOVIE_API_KEY,
     query: title,
@@ -17,24 +16,18 @@ function getMovies(req, res) {
     .query(queryMovie)
     .then((saResults) => {
       let saData = saResults.body.results;
-      let movieArr = saData.map(
-        (x) =>
-          new Movie(
-            x.title,
-            x.overview,
-            x.vote_average,
-            x.vote_count,
-            x.poster_path,
-            x.popularity,
-            x.release_date
-          )
-      );
-      console.log(movieArr);
-      res.status(200).send(movieArr);
+      // console.log('saData:', saData);
+       let movieRa = saData.map((x) => {
+        //  console.log(x);
+         return new Movie(x.title, x.overview, x.vote_average, x.vote_count, x.poster_path, x.popularity, x.release_date)
+       });
+      // console.log('movieArr', movieArr);
+      res.status(200).send(movieRa);
     })
     .catch((err) => {
       res.status(500).send(err);
     });
 }
+
 
 module.exports = getMovies;

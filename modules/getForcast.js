@@ -3,14 +3,12 @@ const superagent = require("superagent");
 const Forecast = require("./forecastConstructor.js");
 
 function getForecast(req, res) {
-  let { lat, lon } = req.query;
-  // console.log(lat, lon);
-  let url = `https://api.weatherbit.io/v2.0/forecast/daily`;
+  let city = req.query.city;
+  let url = `http://api.weatherbit.io/v2.0/forecast/daily`;
   let queryWeather = {
+    city: city,
     key: process.env.WEATHER_API_KEY,
-    lat: lat,
-    lon: lon,
-    days: 10,
+    
   };
   superagent
     .get(url)
@@ -20,15 +18,12 @@ function getForecast(req, res) {
       let forecastArr = saData.map(
         (x) => new Forecast(x.datetime, x.weather.description)
       );
-      // console.log(saResults.body);
       res.status(200).send({
-        longitude: lon,
-        latitude: lat,
+        longitude: saData.lon,
+        latitude: saData.lat,
         forecast: forecastArr,
       });
-    })
-    .catch((err) => {
-      res.status(500).send(err);
     });
 }
+
 module.exports = getForecast;
