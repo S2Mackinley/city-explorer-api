@@ -37,6 +37,8 @@ Finish time: 12:00 am
 
 Actual time needed to complete: too long
 
+03/23/21
+
 ## Name of feature: Added weather json file (placeholder)
 
 Estimate of time needed to complete: 10 hours
@@ -46,6 +48,8 @@ Start time: 1:30pm
 Finish time: 9:00pm
 
 Actual time needed to complete: 7.5hours
+
+03/24/21
 
 ## Name of feature: added weather from api
 
@@ -57,6 +61,8 @@ Finish time:9:00pm
 
 Actual time needed to complete: 7+hours im not done =(
 
+03/25/21
+
 ## Name of feature:
 
 Estimate of time needed to complete:added movies API
@@ -67,15 +73,19 @@ Finish time: 9:00pm
 
 Actual time needed to complete: im sadly still working on this =( no completed..
 
-## Name of feature:
+03/25/21
 
-Estimate of time needed to complete:
+## Name of feature: created cache for page
 
-Start time:
+Estimate of time needed to complete: 200 hours
 
-Finish time:
+Start time:1:00pm
 
-Actual time needed to complete:
+Finish time:9:00pm
+
+Actual time needed to complete:incomplete
+
+03/26/21
 
 Name of feature:
 
