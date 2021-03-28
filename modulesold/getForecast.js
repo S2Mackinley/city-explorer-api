@@ -7,8 +7,10 @@ function getForecast(req, res) {
   console.log(lat, lon);
   let url = `https://api.weatherbit.io/v2.0/forecast/daily`;
   let queryWeather = {
-    city: city,
     key: process.env.WEATHER_API_KEY,
+    lat: lat,
+    lon: lon,
+    days: 5,
   };
   superagent
     .get(url)
