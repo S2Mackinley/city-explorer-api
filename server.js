@@ -1,23 +1,20 @@
-"use strict";
+  'use strict';
 
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
-
-const weatherHandler = require("./modules/weatherHandler.js");
-const movieHandler = require("./modules/movieHandler");
+const express = require('express');
+require('dotenv').config();
+const cors = require('cors');
 const app = express();
 app.use(cors());
 const PORT = process.env.PORT;
 
-// // ==========================  My Code Remove Later!!! ====================================
+const weatherHandler = require('./modules/weather');
+const movieHandler = require('./modules/movies');
 
-app.get("/", function (req, res) {
-  res.send("Hello World");
+app.get('/weather', weatherHandler);
+app.get('/movies', movieHandler);
+
+app.use('*', (request, response) => {
+  response.status(500).send('Server Error');
 });
-// // ========================================================================================
-
-app.get("/movies", movieHandler);
-app.get("/weather", weatherHandler);
 
 app.listen(PORT, () => console.log(`Server up on ${PORT}`));
