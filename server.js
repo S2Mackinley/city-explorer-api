@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 const express = require('express');
 require('dotenv').config();
@@ -8,8 +8,7 @@ app.use(cors());
 const PORT = process.env.PORT;
 
 const weatherHandler = require('./modules/weather');
-const movieHandler = require('./modules/movie');
-
+const movieHandler = require('./modules/movies');
 
 app.get('/weather', weatherHandler);
 app.get('/movies', movieHandler);

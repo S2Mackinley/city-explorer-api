@@ -87,22 +87,12 @@ Actual time needed to complete:incomplete
 
 03/26/21
 
-Name of feature:
+## Name of feature: Fixed API
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 28 hours
 
-Start time:
+Start time: 1:30pm
 
-Finish time:
+Finish time: idk
 
-Actual time needed to complete:
-
-Name of feature:
-
-Estimate of time needed to complete:
-
-Start time:
-
-Finish time:
-
-Actual time needed to complete:
+Actual time needed to complete:2 days 18 hours....
